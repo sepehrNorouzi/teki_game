@@ -67,7 +67,7 @@ class CommonConfigurationJsonConfig(BaseModel):
 
 
 class Configuration(SingletonBaseModel, CachableModel):
-    config = models.ManyToManyField(to=CommonConfigurationJsonConfig, verbose_name=_("Config"), null=True, blank=True)
+    config = models.ManyToManyField(to=CommonConfigurationJsonConfig, verbose_name=_("Config"), blank=True)
     app_name = models.CharField(verbose_name=_("App Name"), max_length=255, default=settings.PROJECT_NAME)
     maintenance_mode = models.BooleanField(verbose_name=_('Maintenance mode'), default=False)
 
