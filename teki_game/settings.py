@@ -155,10 +155,6 @@ TEMP_ROOT = os.path.join(BASE_DIR, 'temp')
 if not os.path.exists(TEMP_ROOT):
     os.makedirs(TEMP_ROOT)
 
-STATICFILES_DIRS = [
-    TEMP_ROOT,
-]
-
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 if not os.path.exists(MEDIA_ROOT):
